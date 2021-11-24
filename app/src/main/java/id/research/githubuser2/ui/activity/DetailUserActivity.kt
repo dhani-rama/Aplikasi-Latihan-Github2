@@ -1,10 +1,9 @@
 package id.research.githubuser2.ui.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.annotation.StringRes
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
@@ -24,7 +23,6 @@ class DetailUserActivity : AppCompatActivity() {
     companion object {
         @StringRes
         private val TAB_TITLES = intArrayOf(R.string.tab_text_1, R.string.tab_text_2)
-        private const val TAG = "Testing"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,10 +40,11 @@ class DetailUserActivity : AppCompatActivity() {
         val users = intent.getParcelableExtra<ItemsItem>(Constant.USERS) as ItemsItem
 //        val users = intent.getStringExtra(Constant.USERS)
 
-        Log.d(TAG, "data terkirim : ${users.login}")
+//        Log.d(TAG, "data terkirim : ${users.login}")
 
         mainViewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(MainViewModel::class.java)
         users.login?.let { mainViewModel.detailUser(users.login) }
+
 
         mainViewModel.mDetailUser.observe(this, {
             mDetailBinding.apply {
@@ -55,6 +54,12 @@ class DetailUserActivity : AppCompatActivity() {
                     .into(imgUser)
 
                 tvName.text = it.name
+                tvValueFollowers.text = it.followers.toString()
+                tvValueFollowing.text = it.following.toString()
+                tvFirstUsername.text = it.login
+                tvSecondUsername.text = it.login
+                tvLocation.text = it.location
+                tvEmail.text = it.email
             }
         })
 

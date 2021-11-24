@@ -1,14 +1,11 @@
 package id.research.githubuser2.ui.activity
 
-import android.annotation.SuppressLint
 import android.app.SearchManager
 import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.ContextMenu
 import android.view.Menu
 import android.view.View
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -48,7 +45,6 @@ class MainActivity : AppCompatActivity() {
         mainViewModel.isLoading.observe(this,{
             showLoading(it)
         })
-
 
     }
 
