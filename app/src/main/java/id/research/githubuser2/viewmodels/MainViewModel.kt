@@ -50,6 +50,7 @@ class MainViewModel : ViewModel() {
                         _mSetUser.value = response.body()?.items as List<ItemsItem>?
                     }
                 } else {
+
                     Log.e(TAG, "onFailure: ${response.message()}")
                 }
             }

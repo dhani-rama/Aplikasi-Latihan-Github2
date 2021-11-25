@@ -69,7 +69,10 @@ class MainActivity : AppCompatActivity() {
 
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(query: String?): Boolean {
+
                 mainViewModel.searchUser(query)
+
+
                 return true
             }
 

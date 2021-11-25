@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/GithubUser2/app/src/main/res/font/roboto.xml" value="0.1125" />
         <entry key="..\:/Users/ramad/AndroidStudioProjects/GithubUser2/app/src/main/res/layout/activity_detail_user.xml" value="0.22" />
         <entry key="..\:/Users/ramad/AndroidStudioProjects/GithubUser2/app/src/main/res/layout/activity_main.xml" value="0.17857142857142858" />
         <entry key="..\:/Users/ramad/AndroidStudioProjects/GithubUser2/app/src/main/res/layout/activity_splash_screen.xml" value="0.15185185185185185" />
