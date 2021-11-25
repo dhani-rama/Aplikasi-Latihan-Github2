@@ -38,9 +38,6 @@ class DetailUserActivity : AppCompatActivity() {
         }
 
         val users = intent.getParcelableExtra<ItemsItem>(Constant.USERS) as ItemsItem
-//        val users = intent.getStringExtra(Constant.USERS)
-
-//        Log.d(TAG, "data terkirim : ${users.login}")
 
         mainViewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(MainViewModel::class.java)
         users.login?.let { mainViewModel.detailUser(users.login) }

@@ -1,7 +1,6 @@
 package id.research.githubuser2.ui.adapter
 
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -46,8 +45,8 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.listUserHolderView>() {
     class listUserHolderView(private val binding: ItemUserBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(usersItem: ItemsItem){
             with(binding){
-                tvName.text = usersItem.login
-                tvUsername.text = usersItem.id
+                tvUsername.text = usersItem.login
+                tvId.text = usersItem.id
 
                 Glide.with(itemView.context)
                     .load(usersItem.avatarUrl)

@@ -43,8 +43,8 @@ class FollowersAdapter : RecyclerView.Adapter<FollowersAdapter.listFollowersHold
         RecyclerView.ViewHolder(binding.root) {
         fun bind(userFollowers: ListFollowersResponseItem) {
             with(binding) {
-                tvName.text = userFollowers.login
-                tvUsername.text = userFollowers.id.toString()
+                tvUsername.text = userFollowers.login
+                tvId.text = userFollowers.id.toString()
 
                 Glide.with(itemView.context)
                     .load(userFollowers.avatarUrl)

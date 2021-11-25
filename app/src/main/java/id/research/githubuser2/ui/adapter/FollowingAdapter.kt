@@ -41,8 +41,8 @@ class FollowingAdapter : RecyclerView.Adapter<FollowingAdapter.listFollowingHold
         RecyclerView.ViewHolder(binding.root) {
         fun bind(userFollowing: ListFollowingResponseItem) {
             with(binding) {
-                tvName.text = userFollowing.login
-                tvUsername.text = userFollowing.id.toString()
+                tvUsername.text = userFollowing.login
+                tvId.text = userFollowing.id.toString()
 
                 Glide.with(itemView.context)
                     .load(userFollowing.avatarUrl)
