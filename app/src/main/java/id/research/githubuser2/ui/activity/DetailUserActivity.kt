@@ -11,8 +11,8 @@ import com.google.android.material.tabs.TabLayoutMediator
 import id.research.githubuser2.R
 import id.research.githubuser2.databinding.ActivityDetailUserBinding
 import id.research.githubuser2.models.ItemsItem
-import id.research.githubuser2.ui.Constant
 import id.research.githubuser2.ui.adapter.DetailPagerAdapter
+import id.research.githubuser2.utils.Constant
 import id.research.githubuser2.viewmodels.MainViewModel
 
 class DetailUserActivity : AppCompatActivity() {

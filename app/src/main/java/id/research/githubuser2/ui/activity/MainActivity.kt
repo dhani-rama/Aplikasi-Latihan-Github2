@@ -32,27 +32,29 @@ class MainActivity : AppCompatActivity() {
         mMainBinding.tbMain.setTitleTextColor(resources.getColor(R.color.white))
         mMainAdapter = MainAdapter()
 
-        mainViewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(MainViewModel::class.java)
+        mainViewModel = ViewModelProvider(
+            this,
+            ViewModelProvider.NewInstanceFactory()
+        ).get(MainViewModel::class.java)
         mainViewModel.mSetUser.observe(this, { mSetUser ->
             mMainAdapter.setListUser(mSetUser as ArrayList<ItemsItem>?)
-            with(mMainBinding.rvList){
+            with(mMainBinding.rvList) {
                 layoutManager = LinearLayoutManager(this@MainActivity)
                 setHasFixedSize(true)
                 adapter = mMainAdapter
             }
         })
 
-        mainViewModel.isLoading.observe(this,{
+        mainViewModel.isLoading.observe(this, {
             showLoading(it)
         })
 
     }
 
-    private fun showLoading(isLoading: Boolean){
-        if(isLoading){
+    private fun showLoading(isLoading: Boolean) {
+        if (isLoading) {
             mMainBinding.progressBar.visibility = View.VISIBLE
-        }
-        else{
+        } else {
             mMainBinding.progressBar.visibility = View.GONE
         }
     }
@@ -67,12 +69,10 @@ class MainActivity : AppCompatActivity() {
         searchView.setSearchableInfo(searchManager.getSearchableInfo(componentName))
         searchView.queryHint = resources.getString(R.string.search)
 
-        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
 
                 mainViewModel.searchUser(query)
-
-
                 return true
             }
 

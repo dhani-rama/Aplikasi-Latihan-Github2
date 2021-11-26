@@ -9,8 +9,8 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import id.research.githubuser2.databinding.ItemUserBinding
 import id.research.githubuser2.models.ItemsItem
-import id.research.githubuser2.ui.Constant
 import id.research.githubuser2.ui.activity.DetailUserActivity
+import id.research.githubuser2.utils.Constant
 
 class MainAdapter : RecyclerView.Adapter<MainAdapter.listUserHolderView>() {
 

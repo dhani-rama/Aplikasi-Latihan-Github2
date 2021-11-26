@@ -10,9 +10,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import id.research.githubuser2.databinding.FragmentFollowingBinding
 import id.research.githubuser2.models.ItemsItem
 import id.research.githubuser2.models.ListFollowingResponseItem
-import id.research.githubuser2.ui.Constant
 import id.research.githubuser2.ui.activity.DetailUserActivity
 import id.research.githubuser2.ui.adapter.FollowingAdapter
+import id.research.githubuser2.utils.Constant
 import id.research.githubuser2.viewmodels.MainViewModel
 
 

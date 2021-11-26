@@ -1,5 +1,6 @@
 package id.research.githubuser2.viewmodels
 
+import android.annotation.SuppressLint
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -10,6 +11,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
+@SuppressLint("StaticFieldLeak")
 class MainViewModel : ViewModel() {
     private val _mSetUser = MutableLiveData<List<ItemsItem>>()
     val mSetUser: LiveData<List<ItemsItem>> = _mSetUser
@@ -34,6 +36,7 @@ class MainViewModel : ViewModel() {
     init {
         findUser()
     }
+
 
     private fun findUser() {
         _isLoading.value = true
